@@ -13,13 +13,13 @@ var iota = new IOTA({
 });
 
 // now you can start using all of the functions
-// iota.api.getNodeInfo(function(error, success) {
-//     if (error) {
-//         console.error(error);
-//     } else {
-//         console.log(success);
-//     }
-// });
+iota.api.getNodeInfo(function(error, success) {
+    if (error) {
+        console.error(error);
+    } else {
+        console.log(success);
+    }
+});
 
 // you can also get the version
 console.log(iota.version);
@@ -35,28 +35,28 @@ iota.api.getTips( function (error,success) {
 
 
 
-iota.api.prepareTransfers("SSEWOZSDXOVIURQRBTBDLQXWIXOLEUXHYBGAVASVPZ9HBTYJJEWBR9PDTGMXZGKPTGSUDW9QLFPJHTIEQZNXDGNRSA",
-    [{
-        'address': 'SSEWOZSDXOVIURQRBTBDLQXWIXOLEUXHYBGAVASVPZ9HBTYJJEWBR9PDTGMXZGKPTGSUDW9QLFPJHTIEQZNXDGNRJE',
-        'value': 10000
-    }], {
-        'inputs': [
-            {
-                address: 'XB9IBINADVMP9K9FEIIR9AYEOFUU9DP9EBCKOTPSDVSNRRNVSJOPTFUHSKSLPDJLEHUBOVEIOJFPDCZS9',
-                balance: 1500,
-                keyIndex: 0,
-                security: 3
-            }, {
-                address: 'W9AZFNWZZZNTAQIOOGYZHKYJHSVMALVTWJSSZDDRVEIXXWPNWEALONZLPQPTCDZRZLHNIHSUKZRSZAZ9W',
-                balance: 8500,
-                keyIndex: 7,
-                security: 2
-            }
-        ]}, function(e, s) {
-
-
-            console.log(e,s);
-        })
+// iota.api.prepareTransfers("SSEWOZSDXOVIURQRBTBDLQXWIXOLEUXHYBGAVASVPZ9HBTYJJEWBR9PDTGMXZGKPTGSUDW9QLFPJHTIEQZNXDGNRSA",
+//     [{
+//         'address': 'SSEWOZSDXOVIURQRBTBDLQXWIXOLEUXHYBGAVASVPZ9HBTYJJEWBR9PDTGMXZGKPTGSUDW9QLFPJHTIEQZNXDGNRJE',
+//         'value': 10000
+//     }], {
+//         'inputs': [
+//             {
+//                 address: 'XB9IBINADVMP9K9FEIIR9AYEOFUU9DP9EBCKOTPSDVSNRRNVSJOPTFUHSKSLPDJLEHUBOVEIOJFPDCZS9',
+//                 balance: 1500,
+//                 keyIndex: 0,
+//                 security: 3
+//             }, {
+//                 address: 'W9AZFNWZZZNTAQIOOGYZHKYJHSVMALVTWJSSZDDRVEIXXWPNWEALONZLPQPTCDZRZLHNIHSUKZRSZAZ9W',
+//                 balance: 8500,
+//                 keyIndex: 7,
+//                 security: 2
+//             }
+//         ]}, function(e, s) {
+//
+//
+//             console.log(e,s);
+//         })
 
 
 
