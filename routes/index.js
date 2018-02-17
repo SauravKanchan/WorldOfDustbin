@@ -34,7 +34,7 @@ console.log(iota.version);
 // })
 
 
-
+//
 // iota.api.prepareTransfers("SSEWOZSDXOVIURQRBTBDLQXWIXOLEUXHYBGAVASVPZ9HBTYJJEWBR9PDTGMXZGKPTGSUDW9QLFPJHTIEQZNXDGNRSA",
 //     [{
 //         'address': 'SSEWOZSDXOVIURQRBTBDLQXWIXOLEUXHYBGAVASVPZ9HBTYJJEWBR9PDTGMXZGKPTGSUDW9QLFPJHTIEQZNXDGNRJE',
@@ -57,7 +57,7 @@ console.log(iota.version);
 //
 //             console.log(e,s);
 //         })
-
+//
 
 
 // iota.api.getTransactionsObjects(['OAATQS9VQLSXCLDJVJJVYUGONXAXOFMJOZNSYWRZSWECMXAQQURHQBJNLD9IOFEPGZEPEMPXCIVRX9999'], function(e, s) {
