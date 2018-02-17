@@ -12,7 +12,7 @@ var iota = new IOTA({
     'provider': 'http://localhost:14265'
 });
 
-// now you can start using all of the functions
+// // now you can start using all of the functions
 iota.api.getNodeInfo(function(error, success) {
     if (error) {
         console.error(error);
@@ -21,17 +21,17 @@ iota.api.getNodeInfo(function(error, success) {
     }
 });
 
-// you can also get the version
+// // you can also get the version
 console.log(iota.version);
 
-iota.api.getTips( function (error,success) {
-    if (error) {
-        console.error(error);
-    } else {
-
-        console.log(success);
-    }
-})
+// iota.api.getTips( function (error,success) {
+//     if (error) {
+//         console.error(error);
+//     } else {
+//
+//         console.log(success);
+//     }
+// })
 
 
 
@@ -60,10 +60,11 @@ iota.api.getTips( function (error,success) {
 
 
 
-
-
-
-
+// iota.api.getTransactionsObjects(['OAATQS9VQLSXCLDJVJJVYUGONXAXOFMJOZNSYWRZSWECMXAQQURHQBJNLD9IOFEPGZEPEMPXCIVRX9999'], function(e, s) {
+//
+//
+//             console.log(s);
+//         })
 
 
 //IOTA stuff ends here
