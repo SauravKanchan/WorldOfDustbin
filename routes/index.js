@@ -3,7 +3,7 @@ var router = express.Router();
 
 
 
-
+/*
 // IOTA stuff starts here
 var IOTA = require('iota.lib.js/lib/iota');
 
@@ -68,7 +68,7 @@ console.log(iota.version);
 
 
 //IOTA stuff ends here
-
+*/
 
 
 
