@@ -410,6 +410,8 @@
         usersRef = db.ref('users/');
         dustRef = db.ref('dustbins/1518880134851');
 
+
+
         dustRef.on("value", (snapshot) => {
                 console.log(snapshot.val());
                 document.getElementById('streak').innerHTML = snapshot.val().streak;
