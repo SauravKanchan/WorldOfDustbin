@@ -410,9 +410,12 @@
         usersRef = db.ref('users/');
         dustRef = db.ref('dustbins/1518880134851');
 
-
+        dustRef.on("child_changed",(snapshot)=>{
+            detach();
+        })
 
         dustRef.on("value", (snapshot) => {
+            attach();
                 console.log(snapshot.val());
                 document.getElementById('streak').innerHTML = snapshot.val().streak;
                 document.getElementById('cash').innerHTML = snapshotToArray(snapshot)[0];

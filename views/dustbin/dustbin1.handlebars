@@ -409,6 +409,9 @@
 
         usersRef = db.ref('users/');
         dustRef = db.ref('dustbins/1518880087182');
+        dustRef.on("child_changed", (snapshot)=>{
+            attach();
+        })
 
         dustRef.on("value", (snapshot) => {
             console.log(snapshot.val());

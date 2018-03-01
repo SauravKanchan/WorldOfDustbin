@@ -1,57 +1,26 @@
-import RPi.GPIO as GPIO
-import time
+file = open("testfile.txt","w")
+for _ in range(int(input())):
+    a=0
+    b=0
+    ma=0
+    mb=0
+    for s in range(int(input())):
+        p,q = map(int,input().split())
+        if p>q:
+            a+=1
+        elif q>p:
+            b+=1
+        mb=max(q,mb)
+        ma=max(p,ma)
+    # print (a,b)
+    if a>b:
+        file.write("1 ")
+        file.write(str(ma))
+    elif b>a:
+        file.write("2 ")
+        file.write(str(mb))
+    else:
+        file.write("draw")
+    file.write("\n")
 
-from firebase import firebase
-
-firebase = firebase.FirebaseApplication('https://dj-hack.firebaseio.com', None)
-result = firebase.get('/dustbins/', None)
-
-GPIO.setmode(GPIO.BCM)
-
-TRIG = 23
-ECHO = 24
-
-print
-"Distance Measurement In Progress"
-
-GPIO.setup(TRIG, GPIO.OUT)
-GPIO.setup(ECHO, GPIO.IN)
-
-GPIO.output(TRIG, False)
-print
-"Waiting For Sensor To Settle"
-time.sleep(2)
-
-current_distance = 0
-
-c = 10
-while (c):
-    time.sleep(2)
-    GPIO.output(TRIG, True)
-    time.sleep(0.00001)
-    GPIO.output(TRIG, False)
-
-    while GPIO.input(ECHO) == 0:
-        pulse_start = time.time()
-
-    while GPIO.input(ECHO) == 1:
-        pulse_end = time.time()
-
-    pulse_duration = pulse_end - pulse_start
-
-    distance = pulse_duration * 17150
-
-    distance = round(distance, 2)
-    pd = round(100 - distance * 100 / 31, 2)
-
-    print "Percentage:", pd, "%"
-    data3 = {'cash': 300, 'currentUser': '', 'parent': '', 'percentFull': pd, 'queryText': '',
-             'queryType': -1, 'streak': 0}
-    if (pd >= 80.0 ):
-        data3 = {'cash': 300, 'currentUser': '', 'parent': '', 'percentFull': pd,
-                 'queryText': 'Daddy1 wants to buy dustbin from amazon',
-                 'queryType': 2, 'streak': 0}
-
-    firebase.put('/dustbins', "1518880087182", data3)
-    c -= 1
-GPIO.cleanup()
+file.close()
