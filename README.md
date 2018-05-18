@@ -2,28 +2,9 @@
 
 
 ## Abstract
-
-#### IOT is a very powerful tool, but on it’s own
-
-#### its applications are very restricted.
-
-#### Connecting different IOT enabled devices
-
-#### using next generation blockchains like
-
-#### Tangle. Currently numerous dustbins
-
-#### across cities lie unused or not used in an
-
-#### efficient manner. Our product connects
-
-#### each of them enabling an entire ecosystem
-
-#### of dustbins where they can efficiently
-
-#### manage waste, identify users and reward
-
-#### them, earn, do transactions, etc.
+IOT is a very powerful tool, but on it’s own its applications are very restricted.Connecting different IOT enabled devices using next generation blockchains like Tangle. Currently numerous dustbins across cities lie unused or not used in an efficient manner. Our product connects each of them enabling an entire ecosystem of dustbins where they can efficiently manage waste, identify users and reward them, earn, do transactions, etc.
+ 
+![alt text](https://cdn-images-1.medium.com/max/1600/1*o-FtUGAGIsaSgvzsDsWqwA.png "Blockchain + IOT = IOTA")
 
 ```
 Blockchain + IOT = IOTA
